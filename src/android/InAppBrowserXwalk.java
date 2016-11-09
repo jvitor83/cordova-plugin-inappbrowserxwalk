@@ -71,7 +71,9 @@ public class InAppBrowserXwalk extends CordovaPlugin {
                 PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
                 result.setKeepCallback(true);
                 callbackContext.sendPluginResult(result);
-            } catch (JSONException ex) {}
+            } catch (JSONException ex) {
+                android.util.Log.v("InAppBrowserXwalk", "json parsing error ex:" + ex);
+            }
         }
     }
 
@@ -89,7 +91,9 @@ public class InAppBrowserXwalk extends CordovaPlugin {
                    PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
                    result.setKeepCallback(true);
                    callbackContext.sendPluginResult(result);
-               } catch (JSONException ex) {}
+               } catch (JSONException ex) {
+                    android.util.Log.v("InAppBrowserXwalk", "json parsing error ex:" + ex);
+               }
            }
 
            @Override
@@ -108,7 +112,9 @@ public class InAppBrowserXwalk extends CordovaPlugin {
                    PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
                    result.setKeepCallback(true);
                    callbackContext.sendPluginResult(result);
-               } catch (JSONException ex) {}
+               } catch (JSONException ex) {
+                   android.util.Log.v("InAppBrowserXwalk", "json parsing error ex:" + ex);
+               }
            }
    }
 
@@ -157,7 +163,7 @@ public class InAppBrowserXwalk extends CordovaPlugin {
                             }
                         }
                     catch (JSONException ex) {
-
+                        android.util.Log.v("InAppBrowserXwalk", "json parsing error ex:" + ex);
                     }
                 }
 
@@ -231,7 +237,9 @@ public class InAppBrowserXwalk extends CordovaPlugin {
                     PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
                     result.setKeepCallback(true);
                     callbackContext.sendPluginResult(result);
-                } catch (JSONException ex) {}
+                } catch (JSONException ex) {
+                    android.util.Log.v("InAppBrowserXwalk", "json parsing error ex:" + ex);
+                }
             }
         });
     }
